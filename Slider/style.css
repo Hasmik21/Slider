@@ -1,0 +1,68 @@
+*, ::after, ::before { margin: 0; padding: 0; box-sizing: border-box; }
+
+.slider {
+    height: 98vh;
+    background: url(1.jpg) no-repeat center center / cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    transition: .5s;
+}
+.slider .btn {
+    padding: 0 30px 8px;
+    border: 0;
+    outline: 0;
+    font-size: 5em;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    cursor: pointer;
+}
+.slider .btn:hover {
+    background: rgba(0, 0, 0, .8);
+} 
+.slider .btn.prev {
+    margin-left: 15px;
+    animation: prev 1.5s linear infinite;
+}
+@keyframes prev {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+}
+.slider .btn.next {
+    margin-right: 15px;
+    animation: next 1.5s linear infinite;
+}
+@keyframes next {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-20px); }
+}
+.slider .dots {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.slider .dots input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #000;
+    transition: .5s;
+}
+.slider .dots input:checked {
+    box-shadow: 0 0 5px #fff;
+    background: #222;
+}
+
+
+
+
+
+
+
+
+
